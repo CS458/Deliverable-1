@@ -1,5 +1,5 @@
 from settings.app import APP
-from render import views
+import controllers
 
 
 APP.run(debug=True)
