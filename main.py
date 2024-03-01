@@ -1,6 +1,6 @@
-from settings.app import APP
+from settings.app import app
 import controllers
 
 
-APP.run(debug=True)
+app.run(debug=True)
 
