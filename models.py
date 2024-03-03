@@ -43,6 +43,16 @@ class User:
                     return user
                 
         return None
+    
+    @property
+    def id(self):
+        if not self.is_valid:
+            return False
+        
+        if not self.__user: #
+            return False
+
+        return self.__user["id"]
 
     def verify(self, not_hashed_password):
         if not self.is_valid:

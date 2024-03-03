@@ -18,12 +18,16 @@
             <form action="{{ url_for('login_page') }}" method="post">
                 <input type="text" class="fadeIn second" name="identifier" placeholder="Email or Phone Number">
                 <input type="password" class="fadeIn third" name="password" placeholder="Password">
-                <input type="submit" class="fadeIn fourth" value="Login">
+                <input type="submit" class="fadeIn fourth" id="submit" value="Login">
             </form>
+            <form action="{{ url_for('login_google') }}" method="post">
+                <input type="submit" class="fadeIn fourth" id="submit" value="Use Google Account">
+            </form>
+            
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                {% if message %}<span>{{ message }}</span>{% endif %}
+                {% if message %}<span id="message">{{ message }}</span>{% endif %}
             </div>
 
         </div>

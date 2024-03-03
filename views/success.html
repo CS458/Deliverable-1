@@ -15,6 +15,9 @@
     <div class="wrapper fadeInDown m-5">
         <div id="formContent" class="p-3">
             <span class="font-weight-bold text-success display-4">Success!</span>
+            <form action="{{ url_for('logout') }}" method="post">
+                <input type="submit" class="fadeIn fourth btn-danger btn" id="submit" value="Logout">
+            </form>
 
         </div>
     </div>
