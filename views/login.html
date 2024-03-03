@@ -18,7 +18,7 @@
             <form action="{{ url_for('login_page') }}" method="post">
                 <input type="text" class="fadeIn second" name="identifier" placeholder="Email or Phone Number">
                 <input type="password" class="fadeIn third" name="password" placeholder="Password">
-                <input type="submit" class="fadeIn fourth" id="submit" value="Login">
+                <input type="submit" class="fadeIn fourth" id="submit" name="submit" value="Login">
             </form>
             <form action="{{ url_for('login_google') }}" method="post">
                 <input type="submit" class="fadeIn fourth" id="submit" value="Use Google Account">
