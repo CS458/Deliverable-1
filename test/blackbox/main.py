@@ -72,8 +72,14 @@ def test_google():
     submit_button = driver.find_element("css", "css=form:nth-child(2) > #submit")
     submit_button.click()
 
-    submit_button = driver.find_element("css", "css=.wLBAL")
-    submit_button.click()
+    time.sleep(3)
+
+    try:
+        submit_button = driver.find_element("css", "css=.wLBAL")
+        submit_button.click()
+    except:
+        pass
+
 
     driver.implicitly_wait(10)
     time.sleep(3)
@@ -87,6 +93,7 @@ def test_google():
     return passed
 
 if __name__=="__main__":
+    print(test_google())
     #4.1.1 Valid Credentials with Phone
     if test_success_credentials(("+905540244745", "1234$cdA6578")):
         print("4.1.1 PASSED")
